@@ -1,0 +1,46 @@
+<div class="modal">
+  <div class="modal-content">
+    <h2>Agregar Valoración</h2>
+    <app-alert></app-alert>
+    <form [formGroup]="valoracionForm" (ngSubmit)="onSave()">
+      <div>
+        <label for="comentario">Comentario:</label>
+        <textarea
+          id="comentario"
+          formControlName="comentario"
+          required
+        ></textarea>
+        <small *ngIf="valoracionForm.get('comentario')?.invalid"
+          >*Ingrese un comentario</small
+        >
+      </div>
+
+      <div>
+        <label for="puntaje">Rating (1-5 Estrellas):</label>
+        <input
+          type="number"
+          id="puntaje"
+          formControlName="puntaje"
+          min="1"
+          max="5"
+          required
+        />
+        <small *ngIf="valoracionForm.get('puntaje')?.invalid"
+          >*Ingrese un puntaje valido</small
+        >
+      </div>
+      <app-button
+        buttonClass="boton-principal"
+        buttonText="Guardar cambios"
+        type="submit"
+        [disabled]="valoracionForm.invalid"
+      ></app-button>
+
+      <app-button
+        buttonClass="boton-secundario"
+        buttonText="Cancelar"
+        (click)="onClose()"
+      ></app-button>
+    </form>
+  </div>
+</div>

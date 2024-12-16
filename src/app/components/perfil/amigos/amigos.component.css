@@ -1,0 +1,56 @@
+.info_container {
+  padding: 2rem;
+}
+
+.imagen_amigo {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 100px;
+  border-color: var(--secondary-color);
+  border-style: solid;
+}
+
+.amigo_container {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.amigo_perfil {
+  margin-left: 1rem;
+  align-content: center;
+  padding-right: 5rem;
+}
+
+.ph-trash {
+  font-size: 2rem;
+}
+
+.boton_container {
+  width: 100%;
+  gap: 0.2rem;
+  display: flex;
+  justify-content: right;
+  margin-top: 2rem;
+}
+
+.input-container {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+@media (min-width: 401px) {
+  .amigo_container {
+    margin-right: 2rem;
+    width: fit-content;
+  }
+
+  .info_amigo {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 0;
+    width: fit-content;
+    gap: 4rem;
+  }
+}

@@ -1,0 +1,20 @@
+<div class="info_container">
+  <h1 class="titulo_seccion">Amigos</h1>
+  <div class="info_amigo">
+    @for (amigo of amigos; track amigo.id) {
+      <app-card-amigo [amigo]="amigo"> </app-card-amigo>
+    }
+  </div>
+  <div class="input-container">
+    <input
+      class="input"
+      type="text"
+      placeholder="Ingrese el usuario que desea agregar"
+      [(ngModel)]="nombreAmigo"
+    />
+    <app-button
+      class="boton-secundario"
+      buttonText="Agregar amigo"
+      (click)="agregarAmigo()"
+    ></app-button>
+  </div>

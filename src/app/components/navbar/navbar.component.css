@@ -1,0 +1,47 @@
+.navbar-mobile {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 75%;
+  height: 100vh;
+  background-color: var(--primary-color);
+  box-shadow: 4px 0 10px rgba(0, 0, 0, 1);
+  transition: right 0.3s ease;
+  z-index: 100;
+}
+
+.navbar-mobile.visible {
+  right: 0; /*Desliza el navbar desde la derecha*/
+  height: 100%;
+}
+
+.navbar-mobile ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+}
+
+.navbar-mobile ul li {
+  padding: 15px 20px;
+  text-align: left;
+  font-size: 1.2rem;
+  border-bottom: var(--secondary-color);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  color: var(--secondary-color);
+}
+
+.navbar-mobile ul li:hover {
+  background-color: var(--hover-color);
+  color: var(--secondary-color);
+}
+
+@media (min-width: 769px) {
+  .navbar-mobile {
+    width: 30%;
+  }
+}

@@ -1,0 +1,60 @@
+<div class="detalle-de-recomendacion-container">
+  <div class="recomendacionloca-titulo">
+    <h1>{{ recomendacion?.nombre }}</h1>
+    @if (recomendacion?.esPublico()) {
+      <i class="ph ph-globe"></i>
+    } @else {
+      <i class="ph ph-globe-x"></i>
+    }
+  </div>
+  <h2 class="sub-titulo">Libros</h2>
+
+  <app-alert data-testid="errorMessage"></app-alert>
+  <div class="book-card-container">
+    @for (libro of recomendacion?.librosRecomendados; track libro?.id) {
+      <app-card-libro
+        [showDeleteButton]="false"
+        [libro]="libro"
+      ></app-card-libro>
+    }
+    <!-- ACA VAN LOS COMPONENTES CARD -->
+  </div>
+
+  <h2 class="titulo-valoracion">Reseña</h2>
+  <p class="descripcion-valoracion">
+    {{ recomendacion?.detalle }}
+  </p>
+  <hr />
+  <span class="titulo-principal-valoracion">
+    <h2 class="promedio-valoraciones">Valoraciones</h2>
+    <h2 aria-label="Promedio de rating" class="container-promedio">
+      <i class="ph-fill ph-star"></i>
+      {{ recomendacion?.valoracionesPromedio() }}/5
+    </h2>
+  </span>
+  <!-- ACA VAN LOS COMPONENTES RESENIA -->
+  <div class="book-card-container">
+    @for (valoracion of recomendacion?.valoraciones; track valoracion) {
+      <app-card-valoracion [valoracion]="valoracion"></app-card-valoracion>
+    }
+
+    @if (!recomendacion?.esCreador(usuarioLogeadoId)) {
+      <i class="ph light ph-plus-circle" (click)="openModal()"></i>
+    }
+  </div>
+
+  @if (isModalOpen) {
+    <app-modal-add-valoracion
+      (close)="closeModal()"
+      (save)="onSaveValoracion($event)"
+    ></app-modal-add-valoracion>
+  }
+  <section class="boton-volver">
+    <app-button
+      buttonClass="boton-principal"
+      buttonText="Volver"
+      (click)="goBack()"
+    >
+    </app-button>
+  </section>
+</div>

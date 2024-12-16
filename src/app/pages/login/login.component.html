@@ -1,0 +1,66 @@
+<body class="content-centered">
+  <div class="login-container box-border">
+    <div class="login-box">
+      <div class="logo">
+        <h1>
+          <img src="assets/icons/book.svg" alt="Ícono ReadApp" class="logo-icon" />
+          ReadApp
+        </h1>
+      </div>
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div class="input-group" [class.error]="hasError('userName', 'required') || hasError('userName', 'pattern')">
+          <label for="userName">Usuario*</label>
+          <input
+            formControlName="userName"
+            class="input"
+            type="text"
+            id="userName"
+            name="userName"
+            [ngClass]="{'error': hasError('userName', 'required') || hasError('userName', 'pattern')}"
+            required
+          />
+          <p *ngIf="submitted && getErrorMessage('userName')" class="error-message visible">
+            <img src="assets/icons/warning.svg" alt="Icono de Aviso" class="warning-icon" />
+            {{ getErrorMessage('userName') }}
+          </p>
+        </div>
+
+        <div class="input-group" [class.error]="hasError('password', 'required')">
+          <label for="password">Password*</label>
+          <div class="password-wrapper">
+            <input
+              formControlName="password"
+              [type]="passwordVisible ? 'text' : 'password'"
+              id="password"
+              name="password"
+              [ngClass]="{'error': hasError('password', 'required')}"
+              required
+            />
+            <span class="show-password" (click)="togglePasswordVisibility()">
+              <img
+                src="assets/icons/eye.svg"
+                alt="Icono De Ojo"
+                class="password-icon"
+                [class.password-visible]="passwordVisible"
+              />
+            </span>
+          </div>
+          <p *ngIf="submitted && getErrorMessage('password')" class="error-message visible">
+            <img src="assets/icons/warning.svg" alt="Icono de Aviso" class="warning-icon" />
+            {{ getErrorMessage('password') }}
+          </p>
+
+          <div *ngIf="submitted && errorMessage" class="error-message">
+            <p>{{ errorMessage }}</p>
+          </div>
+        </div>
+
+        <app-button 
+          buttonClass="boton-principal" 
+          buttonText="Ingresar"
+          type="submit"> 
+        </app-button>  
+      </form>
+    </div>
+  </div>
+</body>

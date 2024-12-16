@@ -1,0 +1,15 @@
+<div>
+  <h1 class="titulo_seccion" style="padding: 2rem;">Recomendaciones a valorar</h1>
+<div class="recomendacion_container">
+  @for (
+      recomendacion of recomendaciones;
+      track recomendacion?.id
+    ) {
+      <app-card-recomendacion
+        [usuarioLogeadoId]="usuarioLogeadoId"
+        [recomendacion]="recomendacion"
+        [userLogged]="userLogged"
+        (onDeleteRecomendation)="onDeleteRecomendation($event)"
+      />
+    }
+</div>

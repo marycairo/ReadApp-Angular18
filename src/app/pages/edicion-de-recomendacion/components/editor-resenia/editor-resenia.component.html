@@ -1,0 +1,10 @@
+
+<section class="resenia-contenedor">
+<label class="titulo-input" for="input-reseña">Reseña*</label>
+<section class="reseña-container">
+  <textarea placeholder="Escriba los detalles de esta recomendación"
+  [(ngModel)]="detalle" 
+  (ngModelChange) = "onDetalleChange($event)"
+  class="input-reseña" id="input-reseña"></textarea>
+</section>
+</section>

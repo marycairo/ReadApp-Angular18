@@ -1,0 +1,105 @@
+.user-review-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: #dddddd;
+  border-radius: 1rem;
+  width: 100%;
+  box-shadow: 0 5px 9px rgba(0, 0, 0, 0.39);
+  height: 16rem;
+}
+
+.titulo-resenia {
+  margin: 1rem 0;
+}
+
+.descripcion-resenia {
+  margin: 1rem 0;
+}
+
+.header-valoracion {
+  display: flex;
+  align-items: center;
+}
+
+.header-valoracion-informacion {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
+  /* width: 100%; Agregar esto en version Tablet y Web */
+}
+
+.user-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.nombre-con-valoracion {
+  display: flex;
+  flex-direction: column;
+  gap: 0.05rem;
+}
+.header-valoracion-informacion h4 {
+  font-weight: lighter;
+  font-size: 1rem;
+  margin-top: 0.2rem;
+}
+
+.header-valoracion-informacion h3 {
+  font-size: 1.1rem;
+}
+
+.fecha-de-valoracion {
+  margin-top: 0.2rem;
+}
+
+.text-resenia {
+  overflow-y: auto;
+}
+
+.promedio-valoraciones i {
+  color: #dab107;
+}
+
+.nombre-con-valoracion i {
+  color: #c0ab4e;
+}
+
+.agregar {
+  align-items: center;
+  justify-content: center;
+}
+
+.agregar i {
+  padding: 0.3rem;
+  font-size: 2rem;
+}
+
+@media (min-width: 401px) and (max-width: 768px) {
+  .header-valoracion-informacion {
+    width: 100%;
+  }
+
+  .nombre-con-valoracion {
+    flex-direction: row;
+    justify-content: space-between;
+    /* align-items: center; */
+    width: 100%;
+  }
+
+  .user-review-card {
+    height: 12.5rem;
+  }
+
+  .text-resenia {
+    overflow-y: auto;
+  }
+}
+
+@media (min-width: 769px) {
+  .user-review-card {
+    height: 12rem;
+  }
+}

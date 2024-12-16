@@ -1,0 +1,50 @@
+ /* Edicion del titulo */
+  
+ .titulo-container {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    margin: 0.5rem 1rem;
+  }
+
+  .titulo-principal {
+    display: flex;
+    padding: 1rem;
+  }
+  
+  .titulo-principal span {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  
+  .titulo-input {
+    margin: 0 1rem;
+  }
+  
+  .input-titulo {
+    width: 60vw;
+    padding: 0.8rem;
+    border-radius: 0.3rem;
+  }
+  
+  .checkbox-titulo span {
+    font-size: 0.7rem;
+  }
+  
+  .checkbox-titulo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  @media (min-width: 769px) {
+ 
+  
+    .input-titulo {
+      width: 70vw;
+      height: 3.5rem;
+    }
+  
+}

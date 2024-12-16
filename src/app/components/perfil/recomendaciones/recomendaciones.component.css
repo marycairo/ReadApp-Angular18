@@ -1,0 +1,16 @@
+
+
+.recomendacion_container{
+    align-items: center;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    
+}
+
+@media (min-width: 768px) {
+    .recomendacion_container{
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+}

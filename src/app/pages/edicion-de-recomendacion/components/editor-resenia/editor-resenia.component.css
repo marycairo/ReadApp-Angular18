@@ -1,0 +1,40 @@
+  
+  /* edicion de reseña */
+
+  .resenia-contenedor{
+    margin: 0.5rem 1rem;
+  }
+  
+  .reseña-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 0.5rem;
+  }
+    
+  .titulo-principal {
+    display: flex;
+    padding: 1rem;
+  }
+  
+  .titulo-principal span {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  
+  .input-reseña {
+    width: 100%;
+    height: 15vh;
+    padding: 0.7rem;
+    border-radius: 0.3rem;
+    resize: none; 
+  }
+  
+  .line-separator {
+    width: 100%;
+    height: 0.1rem;
+    background-color: #3a3838;
+    margin: 1rem 0;
+  }
+  

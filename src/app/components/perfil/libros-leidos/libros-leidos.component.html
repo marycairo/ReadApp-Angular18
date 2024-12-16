@@ -1,0 +1,11 @@
+<div>
+  <h1 class="titulo_seccion" style="padding: 2rem">Libros leidos</h1>
+  <div class="libro_container">
+    @for (libro of librosLeidos; track libro?.id) {
+      <app-card-libro
+        [showDeleteButton]="false"
+        [libro]="libro"
+      ></app-card-libro>
+    }
+  </div>
+</div>

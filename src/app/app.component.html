@@ -1,0 +1,7 @@
+<div class="main">
+  <app-header *ngIf="isLoggedIn" (toggleNavbarEvent)="toggleNavbar()"></app-header>
+  <app-navbar *ngIf="isLoggedIn" [isNavbarVisible]="isNavbarVisible"></app-navbar>
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
+</div>

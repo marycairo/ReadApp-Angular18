@@ -1,0 +1,148 @@
+.content {
+    padding: 0;
+  }
+  
+  .imagen_perfil {
+    width: 3rem;
+    height: auto;
+    margin: 0.5rem;
+    border: 2px solid;
+    border-radius: 100px;
+    border-color: rgb(240, 211, 163);
+  }
+  
+  .imagen_menu_perfil {
+    width: 9rem;
+    height: auto;
+    border-radius: 100px;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .menu_perfil {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .nombre_perfil {
+    font-size: 1.5rem;
+  }
+  
+  .listado_perfil {
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .item_perfil {
+    font-size: 1.5rem;
+    font-weight: normal;
+  }
+  
+  .separador {
+    width: 80%;
+    margin: auto;
+    margin-top: 2rem;
+  }
+  
+  .boton_container {
+    display: flex;
+    margin: 2rem;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .titulo_seccion {
+    font-size: 3rem;
+  }
+  
+  .subtitulo_seccion {
+    font-size: 2rem;
+  }
+  
+  button {
+    height: 100%;
+  }
+  
+  @media (min-width: 401px) {
+    .main {
+      width: 100vw;
+      height: 100vh;
+      display: grid;
+      grid-template-rows: 1fr 9fr;
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "header"
+        "contenido";
+    }
+  
+    .header {
+      background-color: var(--primary-color);
+      grid-area: header;
+      color: var(--secondary-text-color);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.8rem;
+      width: 100%;
+      z-index: 1000;
+      position: unset;
+    }
+  
+    .menu_perfil {
+      justify-content: flex-start;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-left: 2rem;
+    }
+  
+    .imagen_menu_perfil {
+      width: 9rem;
+      height: auto;
+      border-radius: 100px;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      margin-right: 1rem;
+    }
+  
+    .separador {
+      width: 90%;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .content {
+      background-color: var(--background-color);
+      display: flex;
+      flex-direction: row;
+      gap: 0px;
+      padding: 0rem 4rem 0rem 0rem;
+      overflow: auto;
+    }
+
+    .outlet{
+      width: 75%;
+    }
+
+    .perfil{
+      width: 25%;
+    }
+  
+    .menu_perfil {
+      justify-content: flex-start;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-right: 2rem;
+    }
+  
+    .boton_container {
+      bottom: 0;
+      right: 0;
+      width: 20rem;
+    }
+  }
+  

@@ -1,0 +1,63 @@
+<div class="search__item__container">
+  <div class="header__item">
+    <div class="recomend_title">{{ recomendacion.nombre }}</div>
+    @if (recomendacion.esCreador(usuarioLogeadoId)) {
+      <i
+      class="ph ph-pencil-simple"
+      (click)="editarRecomendacion(recomendacion)"
+      ></i>
+      <i 
+      class="ph ph-trash-simple"
+      (click)="openModal()">
+      </i>
+      @if (isModalOpen) {
+        <app-modal-delete-rec
+          (close)="closeModal()"
+          (accion)="deleteRecomendation()"
+          [message]="'¿Desea eliminar esta Recomendación?'"
+
+        ></app-modal-delete-rec>
+      }
+    }
+    @if (recomendacion.esAmigo(usuarioLogeadoId)) {
+      <i class="ph ph-heart"
+      (click)="likeRecomendacion(recomendacion)"
+      ></i>
+      
+    }
+  </div>
+  <p class="description__item">
+    {{ recomendacion.detalle }}
+  </p>
+  <div class="books__item">
+    @for (libro of recomendacion.librosRecomendados; track libro.id) {
+      <div class="book">
+        <i class="ph ph-bookmark"></i>
+        <div class="nombre truncate-text">{{ libro.titulo }}</div>
+      </div>
+    }
+  </div>
+  <div class="specs__item">
+    <div class="rating">
+      <i class="ph ph-star"> </i>
+      <div class="spec_rate">{{ recomendacion.valoracionesPromedio() }}</div>
+    </div>
+    <div class="cantidad">
+      <i class="ph ph-books"> </i>
+      <div class="spec_cant">{{ recomendacion.cantLibros() }}</div>
+    </div>
+    <!-- necesito al user para calcular esto -->
+    <div class="horas-totales">
+      <i class="ph ph-clock"> </i>
+      <div class="spec_horas">
+        {{ recomendacion.tiempoTotal(this.userLogged!) }} horas
+      </div>
+    </div>
+  </div>
+  <div class="footer__item">
+    <tr>
+      <div class="footer_text" (click)="verMas(recomendacion)">Ver Mas</div>
+      <i class="ph ph-caret-double-right"></i>
+    </tr>
+  </div>
+</div>

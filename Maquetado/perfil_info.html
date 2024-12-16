@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vista base</title>
+    <link rel="stylesheet" href="layout.css" />
+    <link rel="stylesheet" href="estilos/layout_perfil.css" />
+    <link rel="stylesheet" href="estilos/layout_info.css" />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="header">
+        <div class="header__icon__container">
+          <i class="ph ph-book"></i>
+          <h1 class="header__icon">ReadApp</h1>
+        </div>
+
+        <div class="header__user">
+          <div class="header__image">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/1/1f/Narig%C3%B3n_Bilardo_1986.jpg"
+              class="user__image"
+            />
+          </div>
+          <div class="header__name">Roberto Carlos</div>
+        </div>
+        <div class="header__hamburger">
+          <i class="ph ph-list"></i>
+        </div>
+      </div>
+      <div class="content">
+        <div class="perfil">
+          <div class="menu_perfil">
+            <img class="imagen_menu_perfil"
+            src=https://es.coachesvoice.com/wp-content/uploads/2022/08/bilardomobile.jpg>
+            <h3 class="nombre_perfil">Carlos Salvador Bilardo</h3>
+          </div>
+          <hr class="separador" />
+          <div class="listado_perfil">
+            <p class="item_perfil"><i class="ph ph-info"></i>Informacion</p>
+            <p class="item_perfil"><i class="ph ph-users-three"></i>Amigos</p>
+            <p class="item_perfil"><i class="ph ph-book"></i>Libros leidos</p>
+            <p class="item_perfil">
+              <i class="ph ph-bookmarks"></i>Libros a leer
+            </p>
+            <p class="item_perfil">
+              <i class="ph ph-heart"></i>Recomendaciones a valorar
+            </p>
+          </div>
+        </div>
+        <div class="info_container">
+          <div class="info_perfil">
+            <h1 class="titulo_seccion">Informacion</h1>
+            <h2 class="subtitulo_seccion">General</h2>
+            <div class="item_info_container">
+              <div class="item_info_perfil">
+                <h4>Nombre*</h4>
+                <input class="input_perfil" />
+              </div>
+              <div class="item_info_perfil">
+                <h4>Apellido</h4>
+                <input class="input_perfil" />
+              </div>
+              <div class="item_info_perfil">
+                <h4>Username</h4>
+                <input class="input_perfil" />
+              </div>
+              <div class="item_info_perfil">
+                <h4>Fecha de Nacimiento</h4>
+                <input type="datetime" class="input_perfil" />
+              </div>
+              <div class="item_info_perfil">
+                <h4>Mail</h4>
+                <input class="input_perfil" />
+              </div>
+              <div class="item_info_perfil">
+                <h4>Tiempo de Lectura Promedio</h4>
+                <input class="input_perfil" />
+              </div>
+            </div>
+          </div>
+          <hr class="separador" />
+          <div class="info_perfil">
+            <h2 class="subtitulo_seccion">Forma de Lectura</h2>
+            <div class="item_info_container">
+              <div class="item_info_checkbox">
+                <input type="checkbox" style="margin-right: 10px" />
+                <h4>Lector Promedio</h4>
+              </div>
+              <div class="item_info_checkbox">
+                <input type="checkbox" style="margin-right: 10px" />
+                <h4>Ansioso</h4>
+              </div>
+              <div class="item_info_checkbox">
+                <input type="checkbox" style="margin-right: 10px" />
+                <h4>Fanatico</h4>
+              </div>
+              <div class="item_info_checkbox">
+                <input type="checkbox" style="margin-right: 10px" />
+                <h4>Recurrente</h4>
+              </div>
+            </div>
+          </div>
+          <hr class="separador" />
+          <div class="info_perfil">
+            <h2 class="subtitulo_seccion">Criterio de busqueda</h2>
+            <div class="item_info_container">
+              <div class="item_info_checkbox">
+                <input type="checkbox" style="margin-right: 10px" />
+                <h4>Precavido</h4>
+              </div>
+              <div class="item_info_checkbox">
+                <input type="checkbox" style="margin-right: 10px" />
+                <h4>Leedor</h4>
+              </div>
+              <div class="item_info_checkbox">
+                <input type="checkbox" style="margin-right: 10px" />
+                <h4>Poliglota</h4>
+              </div>
+              <div class="item_info_checkbox">
+                <input type="checkbox" style="margin-right: 10px" />
+                <h4>Demandante</h4>
+              </div>
+              <div class="item_info_checkbox">
+                <input type="checkbox" style="margin-right: 10px" />
+                <h4>Nativista</h4>
+              </div>
+              <div class="item_info_checkbox">
+                <input type="checkbox" style="margin-right: 10px" />
+                <h4>Experimentado</h4>
+              </div>
+              <div class="item_info_checkbox">
+                <input type="checkbox" style="margin-right: 10px" />
+                <h4>Cambiantes</h4>
+              </div>
+              <div class="item_info_checkbox">
+                <input type="checkbox" style="margin-right: 10px" />
+                <h4>Calculador</h4>
+              </div>
+              <div class="item_info_perfil">
+                <h4>Limite Minimo</h4>
+                <input class="input_perfil" />
+              </div>
+              <div class="item_info_perfil">
+                <h4>Limite Maximo</h4>
+                <input class="input_perfil" />
+              </div>
+            </div>
+            <div class="boton_container">
+              <button class="boton-secundario">Cancelar</button>
+              <button class="boton-principal">Guardar Cambios</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

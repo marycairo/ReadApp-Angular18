@@ -1,0 +1,58 @@
+<div class="edicion-de-recomendacion-container">
+  <!-- EDITOR DEL TITULO -->
+  <app-editor-titulo
+    [titulo]="nuevoNombre"
+    (tituloChange)="nuevoNombre = $event"
+    [publico]="esPublico"
+    (publicoChange)="esPublico = $event"
+  ></app-editor-titulo>
+
+  <!-- CARDS DE LIBROS -->
+  <div class="book-card-container">
+    @if (errorMessage) {
+      <app-alert [type]="alertType" [message]="errorMessage" data-testid="errorMessage"></app-alert>
+    }
+    @for (libro of librosTemporales; track libro?.id) {
+      <app-card-libro
+        [showDeleteButton]="true"
+        [libro]="libro"
+        (libroDeleted)="eliminarLibro($event)"
+      ></app-card-libro>
+    }
+    <div class="invisible-card">
+      <article data-testid="agregarLibro" (click)="agregarLibro()" class="boton-add"  >
+        <i class="ph ph-plus"></i>
+      </article>
+    </div>
+  </div>
+
+  <!-- EDITOR DE RESEÑAS -->
+  <app-editor-resenia
+    [detalle]="nuevoDetalle"
+    (detalleChange)="nuevoDetalle = $event"
+  ></app-editor-resenia>
+  <app-alert class="alerta"></app-alert>
+
+  <section class="botones-edicion">
+    <app-button
+      buttonClass="boton-secundario"
+      buttonText="Cancelar"
+      (click)="openModal()"
+    >
+    </app-button>
+    @if (isModalOpen) {
+      <app-modal-delete-rec
+        (close)="closeModal()"
+        (accion)="volver()"
+        [message]="'¿Está seguro de que desea descartar los cambios?'"
+      ></app-modal-delete-rec>
+    }
+    <app-button
+    data-testid="guardarCambios"
+      buttonClass="boton-principal"
+      buttonText="Guardar cambios"
+      (clickEvent)="guardarCambios()"
+    >
+    </app-button>
+  </section>
+</div>

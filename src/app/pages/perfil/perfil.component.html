@@ -1,0 +1,32 @@
+<div class="content">
+  <div class="perfil">
+    <div class="menu_perfil">
+      <img
+        class="imagen_menu_perfil"
+        [src]="'assets/images/perfil/' + getUserLogedID() + '.jpg'"
+      />
+      <h3 class="nombre_perfil">{{ usuario?.name }} {{ usuario?.lastName }}</h3>
+    </div>
+    <hr class="separador" />
+    <div class="listado_perfil">
+      <a href="perfil/info" class="item_perfil"
+        ><i class="ph ph-info"></i>Informacion</a
+      >
+      <a href="perfil/amigos" class="item_perfil"
+        ><i class="ph ph-users-three"></i>Amigos</a
+      >
+      <a href="perfil/libros-leidos" class="item_perfil"
+        ><i class="ph ph-book"></i>Libros leidos</a
+      >
+      <a href="perfil/libros-por-leer" class="item_perfil">
+        <i class="ph ph-bookmarks"></i>Libros a leer
+      </a>
+      <a href="perfil/recomendaciones" class="item_perfil">
+        <i class="ph ph-heart"></i>Recomendaciones a valorar
+      </a>
+    </div>
+  </div>
+  <article class="outlet">
+    <router-outlet></router-outlet>
+  </article>
+</div>

@@ -1,0 +1,31 @@
+<div class="content_rec_layout">
+  <app-my-recom-searchbar
+    (searchTextChange)="onSearchTextReceived($event)"
+    (checkboxChange)="onCheckboxChange($event)"
+    [showCheckbox]="data.showCheckbox"
+  />
+
+  <app-alert class="alerta"></app-alert>
+
+  <div class="reccommend_container">
+    @for (
+      recomendacion of recomendaciones | recomendFilter: showPrivate;
+      track recomendacion?.id
+    ) {
+      <app-card-recomendacion
+        [usuarioLogeadoId]="usuarioLogeadoId"
+        [recomendacion]="recomendacion"
+        [userLogged]="userLogged"
+        (onDeleteRecomendation)="onDeleteRecomendation($event)"
+        (onLikeRecomendation)="onLikeRecomendation($event)"
+      />
+    }
+    @if (isMisRecomendaciones()) {
+      <div class="invisible-card">
+        <article class="boton-add" (click)="crearRecomendacion()">
+          <i class="ph ph-plus"></i>
+        </article>
+      </div>
+    }
+  </div>
+</div>

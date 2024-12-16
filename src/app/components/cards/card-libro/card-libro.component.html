@@ -1,0 +1,43 @@
+<article class="book-card">
+  <section class="book-imagen">
+    <img
+      [src]="'assets/images/libros/' + libro.id + '.jpg'"
+      alt="portada-libro"
+    />
+  </section>
+
+  <section class="informacion">
+    <div class="informacion-principal">
+      <div class="book-titulo">
+        <div>
+          <h2 class="truncate-text">{{ libro.titulo }}</h2>
+        </div>
+        <div>
+          @if (libro.esDesafiante()) {
+            <i class="ph ph-certificate"></i>
+          }
+          @if (libro.esBestSeller()) {
+            <i class="ph ph-fire"></i>
+          }
+        </div>
+      </div>
+      <h3>{{ libro.autor?.nombre }} {{ libro.autor?.apellido }}</h3>
+    </div>
+    <div class="informacion-secundaria">
+      <h4><i class="ph ph-file"></i>{{ libro.cantidadPaginas }}</h4>
+      <h4><i class="ph ph-text-aa"></i>{{ libro.cantidadPalabras }}</h4>
+      <h4>
+        <i class="ph ph-globe"></i>{{ libro.lenguajesTraduccion?.join(', ') }}
+      </h4>
+      <h4>
+        <i class="ph ph-currency-circle-dollar"></i>{{ libro.ventasSemanales }}
+      </h4>
+    </div>
+
+    @if (showDeleteButton) {
+      <div (click)="deleteLibro()" class="delete">
+        <i class="ph light ph-trash"></i>
+      </div>
+    }
+  </section>
+</article>

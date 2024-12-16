@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Edicion de recomendación</title>
+  <link rel="stylesheet" href="layout.css" />
+  <link rel="stylesheet" href="estilos\edicion_de_recomendacion.css" />
+  <link rel="stylesheet" href="estilos/card_libro.css" />
+  <link rel="stylesheet" href="estilos/card_resenia.css" />
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+
+<body>
+  <div class="main">
+    <div class="content">
+      <div class="encabezado">
+        <label class="titulo-input" for="titulo-input">Titulo*</label>
+        <section class="titulo-container">
+          <input placeholder="Titulo de recomendacion" class="input-titulo" type="text" id="titulo-input" />
+          <div class="checkbox-titulo">
+            <input type="checkbox" id="checkbox-visibilidad" />
+            <label for="checkbox-visibilidad">Visibilidad privada</label>
+          </div>
+        </section>
+
+        <div class="titulo-principal">
+          <span>Libros</span>
+        </div>
+      </div>
+
+      <div class="book-card-container">
+        <article class="book-card">
+          <section class="book-imagen">
+            <img src="images/harry-potter-portada.png" alt="portada-harry-potter" />
+          </section>
+
+          <section class="informacion">
+            <div class="informacion-principal">
+              <div class="book-titulo">
+                <h2>Harry Potter</h2>
+                <div>
+                  <i class="ph ph-certificate"></i>
+                  <i class="ph ph-fire"></i>
+                </div>
+              </div>
+              <h3>Por J.K. Rowling</h3>
+            </div>
+            <div class="informacion-secundaria">
+              <h4><i class="ph ph-file"></i>200 paginas</h4>
+              <h4><i class="ph ph-text-aa"></i>8965 palabras</h4>
+              <h4><i class="ph ph-globe"></i>Espanol - Ingles - Chino</h4>
+              <h4>
+                <i class="ph ph-currency-circle-dollar"></i>92178 ventas
+                semanales
+              </h4>
+            </div>
+            <div class="delete"><i class="ph ph-trash"></i></div>
+
+          </section>
+        </article>
+
+        <article class="book-card">
+          <section class="book-imagen">
+            <img src="images/harry-potter-portada.png" alt="portada-harry-potter" />
+          </section>
+
+          <section class="informacion">
+            <div class="informacion-principal">
+              <div class="book-titulo">
+                <h2>Harry Potter</h2>
+                <div>
+                  <i class="ph ph-certificate"></i>
+                  <i class="ph ph-fire"></i>
+                </div>
+              </div>
+              <h3>Por J.K. Rowling</h3>
+            </div>
+            <div class="informacion-secundaria">
+              <h4><i class="ph ph-file"></i>200 paginas</h4>
+              <h4><i class="ph ph-text-aa"></i>8965 palabras</h4>
+              <h4><i class="ph ph-globe"></i>Espanol - Ingles - Chino</h4>
+              <h4>
+                <i class="ph ph-currency-circle-dollar"></i>92178 ventas
+                semanales
+              </h4>
+            </div>
+            <div class="delete"><i class="ph ph-trash"></i></div>
+
+          </section>
+        </article>
+
+        <article class="book-card">
+          <section class="book-imagen">
+            <img src="images/harry-potter-portada.png" alt="portada-harry-potter" />
+          </section>
+
+          <section class="informacion">
+            <div class="informacion-principal">
+              <div class="book-titulo">
+                <h2>Harry Potter</h2>
+                <div>
+                  <i class="ph ph-certificate"></i>
+                  <i class="ph ph-fire"></i>
+                </div>
+              </div>
+              <h3>Por J.K. Rowling</h3>
+            </div>
+            <div class="informacion-secundaria">
+              <h4><i class="ph ph-file"></i>200 paginas</h4>
+              <h4><i class="ph ph-text-aa"></i>8965 palabras</h4>
+              <h4><i class="ph ph-globe"></i>Espanol - Ingles - Chino</h4>
+              <h4>
+                <i class="ph ph-currency-circle-dollar"></i>92178 ventas
+                semanales
+              </h4>
+            </div>
+            <div class="delete"><i class="ph ph-trash"></i></div>
+
+          </section>
+        </article>
+
+        <article class="boton-add">
+          <section>
+            <i class="ph ph-plus"></i>
+          </section>
+        </article>
+      </div>
+
+      <label class="titulo-input" for="input-reseña">Reseña*</label>
+      <section class="reseña-container">
+        <textarea class="input-reseña" id="input-reseña"></textarea>
+      </section>
+      <div class="line-separator"></div>
+
+      <section class="titulo-principal">
+        <span>Valoraciones</span>
+        <div class="promedio-valoraciones">
+          <i class="ph-fill ph-star"></i> 4,5/5
+        </div>
+      </section>
+
+      <div class="resenias-container">
+        <section class="user-review-card">
+          <div class="header-valoracion">
+            <div class="header-valoracion-imagen">
+              <img class="user-img" src="images/profile-pic.jpg" alt="profile-pic" />
+            </div>
+            <div class="header-valoracion-informacion">
+              <div class="nombre-con-valoracion">
+                <h3>Alan Guarino</h3>
+                <span><i class="ph-fill ph-star"></i>4.5</span>
+              </div>
+              <h4>Agosto 2024</h4>
+            </div>
+          </div>
+          <div class="text-resenia">
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia
+              doloremque perspiciatis saepe id esse laboriosam quo quos iusto.
+              Officiis porro ducimus provident facere culpa quos, dolorem
+              libero accusantium consequatur laudantium!
+            </p>
+          </div>
+        </section>
+        <section class="user-review-card">
+          <div class="header-valoracion">
+            <div class="header-valoracion-imagen">
+              <img class="user-img" src="images/profile-pic.jpg" alt="profile-pic" />
+            </div>
+            <div class="header-valoracion-informacion">
+              <div class="nombre-con-valoracion">
+                <h3>Alan Guarino</h3>
+                <span><i class="ph-fill ph-star"></i>4.5</span>
+              </div>
+              <h4>Agosto 2024</h4>
+            </div>
+          </div>
+          <div class="text-resenia">
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia
+              doloremque perspiciatis saepe id esse laboriosam quo quos iusto.
+              Officiis porro ducimus provident facere culpa quos, dolorem
+              libero accusantium consequatur laudantium!
+            </p>
+          </div>
+        </section>
+        <section class="user-review-card">
+          <div class="header-valoracion">
+            <div class="header-valoracion-imagen">
+              <img class="user-img" src="images/profile-pic.jpg" alt="profile-pic" />
+            </div>
+            <div class="header-valoracion-informacion">
+              <div class="nombre-con-valoracion">
+                <h3>Alan Guarino</h3>
+                <span><i class="ph-fill ph-star"></i>4.5</span>
+              </div>
+              <h4>Agosto 2024</h4>
+            </div>
+          </div>
+          <div class="text-resenia">
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia
+              doloremque perspiciatis saepe id esse laboriosam quo quos iusto.
+              Officiis porro ducimus provident facere culpa quos, dolorem
+              libero accusantium consequatur laudantium!
+            </p>
+          </div>
+        </section>
+        <section class="user-review-card">
+          <div class="header-valoracion">
+            <div class="header-valoracion-imagen">
+              <img class="user-img" src="images/profile-pic.jpg" alt="profile-pic" />
+            </div>
+            <div class="header-valoracion-informacion">
+              <div class="nombre-con-valoracion">
+                <h3>Alan Guarino</h3>
+                <span><i class="ph-fill ph-star"></i>4.5</span>
+              </div>
+              <h4>Agosto 2024</h4>
+            </div>
+          </div>
+          <div class="text-resenia">
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia
+              doloremque perspiciatis saepe id esse laboriosam quo quos iusto.
+              Officiis porro ducimus provident facere culpa quos, dolorem
+              libero accusantium consequatur laudantium!
+            </p>
+          </div>
+        </section>
+        <section class="user-review-card">
+          <div class="header-valoracion">
+            <div class="header-valoracion-imagen">
+              <img class="user-img" src="images/profile-pic.jpg" alt="profile-pic" />
+            </div>
+            <div class="header-valoracion-informacion">
+              <div class="nombre-con-valoracion">
+                <h3>Alan Guarino</h3>
+                <span><i class="ph-fill ph-star"></i>4.5</span>
+              </div>
+              <h4>Agosto 2024</h4>
+            </div>
+          </div>
+          <div class="text-resenia">
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia
+              doloremque perspiciatis saepe id esse laboriosam quo quos iusto.
+              Officiis porro ducimus provident facere culpa quos, dolorem
+              libero accusantium consequatur laudantium! Lorem ipsum dolor,
+              sit amet consectetur adipisicing elit. Quia doloremque
+              perspiciatis saepe id esse laboriosam quo quos iusto. Officiis
+              porro ducimus provident facere culpa quos, dolorem libero
+              accusantium consequatur laudantium!
+            </p>
+          </div>
+        </section>
+      </div>
+
+      <section class="botones-edicion">
+        <button class="boton-secundario" type="submit">Cancelar</button>
+        <button class="boton-principal" type="submit">Guardar cambios</button>
+      </section>
+    </div>
+
+    <div class="header">
+      <div class="header__icon__container">
+        <i class="ph ph-book"></i>
+        <h1 class="header__icon">ReadApp</h1>
+      </div>
+      <div class="header__user">
+        <div class="header__image">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/1/1f/Narig%C3%B3n_Bilardo_1986.jpg"
+            class="user__image" />
+        </div>
+        <div class="header__name">Roberto Carlos</div>
+      </div>
+      <div class="header__hamburger">
+        <i class="ph ph-list"></i>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

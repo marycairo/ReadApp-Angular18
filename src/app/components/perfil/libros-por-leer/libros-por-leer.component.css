@@ -1,0 +1,16 @@
+.libro_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .libro_container {
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  .book-card {
+    min-width: 49%;
+  }
+}

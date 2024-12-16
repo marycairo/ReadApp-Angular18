@@ -1,0 +1,22 @@
+<div class="encabezado">
+  <label class="titulo-input" for="titulo-input">Titulo*</label>
+  <section class="titulo-container">
+    <input
+    [(ngModel)]="titulo"
+    (ngModelChange)="onTituloChange($event)"
+       placeholder="Escriba un titulo"
+      class="input-titulo"
+      type="text"
+      id="titulo-input"
+    />
+    <div class="checkbox-titulo">
+      <input type="checkbox" id="checkbox-visibilidad"  [(ngModel)]="publico" (ngModelChange)="onPublicoChange($event)"
+      />
+      <label for="checkbox-visibilidad"> Visibilidad privada </label>
+    </div>
+  </section>
+
+  <div class="titulo-principal">
+    <span>Libros</span>
+  </div>
+</div>

@@ -1,0 +1,56 @@
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+/* Estilos del formulario */
+.modal form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Estilos de los campos */
+.modal form input,
+.modal form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--secondary-color);
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+.modal form input:focus,
+.modal form textarea:focus {
+  border-color: var(--primary-color);
+}
+
+small {
+  color: red;
+}
+
+@media (min-width: 401px) {
+  .modal-content {
+    width: 400px;
+  }
+}

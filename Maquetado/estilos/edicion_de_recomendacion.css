@@ -1,0 +1,171 @@
+.main {
+  display: grid;
+  grid-template-areas:
+    "contenido"
+    "header";
+  grid-template-rows: 1fr auto;
+  min-height: 100vh;
+}
+
+.content {
+  overflow-y: auto;
+}
+
+.titulo-principal {
+  display: flex;
+  padding: 1rem;
+}
+
+.titulo-principal span {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* Edicion del titulo */
+
+.titulo-container {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  margin: 0.5rem 1rem;
+}
+
+.titulo-input {
+  margin: 0 1rem;
+}
+
+.input-titulo {
+  width: 60vw;
+  padding: 0.8rem;
+  border-radius: 0.3rem;
+}
+
+.checkbox-titulo span {
+  font-size: 0.7rem;
+}
+
+.checkbox-titulo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Boton add */
+
+.boton-add {
+  bottom: 7rem;
+  background-color: var(--primary-color);
+  color: var(--secondary-text-color);
+  border-radius: 50%;
+  padding: 0.5rem;
+}
+
+.boton-add i {
+  font-size: 2rem;
+}
+
+.delete {
+  display: flex;
+  justify-content: end;
+  color: rgb(246, 18, 30);
+}
+
+.delete i {
+  font-size: 2rem;
+  padding: 8px;
+  border-radius: 30%;
+  font-weight: bold;
+}
+
+.delete i:hover {
+  background-color: #d3b28df9;
+}
+
+/* edicion de reseña */
+.reseña-container {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 0.5rem;
+}
+
+.input-reseña {
+  width: 100vw;
+  height: 15vh;
+  padding: 0.7rem;
+  border-radius: 0.3rem;
+}
+
+.line-separator {
+  width: 100%;
+  height: 0.1rem;
+  background-color: #3a3838;
+  margin: 1rem 0;
+}
+
+/* boton */
+
+.botones-edicion {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-right: 2rem;
+}
+
+/*tablet*/
+
+@media (min-width: 401px) and (max-width: 768px) {
+  .main {
+    grid-template-areas:
+      "header"
+      "contenido";
+  }
+
+  .header {
+    bottom: auto;
+    top: 0;
+  }
+
+  .botones-edicion {
+    width: 100%;
+    text-align: right;
+  }
+
+  .boton-principal {
+    width: 13rem;
+  }
+
+  .boton-secundario {
+    width: 10rem;
+  }
+}
+
+/*Desktop*/
+
+@media (min-width: 769px) {
+  .main {
+    grid-template-areas:
+      "header"
+      "contenido";
+  }
+
+  .input-titulo {
+    width: 70vw;
+    height: 3.5rem;
+  }
+
+
+  .botones-edicion {
+    width: 100%;
+    text-align: right;
+  }
+
+  .boton-principal {
+    width: 13rem;
+  }
+
+  .boton-secundario {
+    width: 10rem;
+  }
+}

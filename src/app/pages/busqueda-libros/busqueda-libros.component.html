@@ -1,0 +1,12 @@
+<!-- <app-error-message *ngIf="hasError"></app-error-message> 
+<app-searchbar  (searchTextChange)="onSearchTextReceived($event)" *ngIf="!hasError"></app-searchbar> 
+<app-card-libro *ngFor="let libro of librosFiltrados" [libro]="libro"></app-card-libro> -->
+<div class="content_libro_layout">
+    <app-searchbar  (searchTextChange)="onSearchTextReceived($event)" *ngIf="!hasError"></app-searchbar> 
+    <div class="book-card-container" >
+        @for (libro of libros; track libro){
+            <app-card-libro [libro]="libro"  (click)="seleccionarLibro(libro)"
+                ></app-card-libro>
+         }
+    </div>
+</div>

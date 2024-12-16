@@ -1,0 +1,25 @@
+<article class="user-review-card">
+  <div class="header-valoracion">
+    <div class="header-valoracion-imagen">
+      <img
+        class="user-img"
+        [src]="'assets/images/perfil/' + usuarioLogeado + '.jpg'"
+        alt="profile-pic"
+      />
+    </div>
+    <div class="header-valoracion-informacion">
+      <div class="nombre-con-valoracion">
+        <h3>{{ valoracion?.userName }}</h3>
+        <span class="container-valoracion"
+          ><i class="ph-fill ph-star"></i>{{ valoracion?.valor }}</span
+        >
+      </div>
+      <h4>Agosto 2024</h4>
+    </div>
+  </div>
+  <div class="text-valoracion">
+    <p>
+      {{ valoracion?.comentario }}
+    </p>
+  </div>
+</article>

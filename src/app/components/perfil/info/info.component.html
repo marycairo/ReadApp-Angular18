@@ -1,0 +1,106 @@
+<form (ngSubmit)="guardar()">
+  <div class="info_container">
+      <div class="info_perfil">
+        <h1 class="titulo_seccion">Informacion</h1>
+        <h2 class="subtitulo_seccion">General</h2>
+        <div class="item_info_container">
+          <div class="item_info_perfil">
+            <h4>Nombre*</h4>
+            <input class="input_perfil"  name="name" type="text" placeholder="Nombre" [(ngModel)]="usuario.name" (ngModelChange)="unchangedFlag = false"/>
+          </div>
+          <div class="item_info_perfil">
+            <h4>Apellido</h4>
+            <input class="input_perfil" name="lastName" type="text" placeholder="Apellido" [(ngModel)]="usuario.lastName" (ngModelChange)="unchangedFlag = false"/>
+          </div>
+          <div class="item_info_perfil">
+            <h4>Username</h4>
+            <input class="input_perfil" name="userName" type="text" placeholder="Nombre de usuario" [(ngModel)]="usuario.userName" (ngModelChange)="unchangedFlag = false"/>
+          </div>
+          <div class="item_info_perfil">
+            <h4>Fecha de Nacimiento</h4>
+            <input type="date"  class="input_perfil" name="birthdate" placeholder="Fecha de nacimiento" [(ngModel)]="usuario.birthdate" (ngModelChange)="unchangedFlag = false"/>
+          </div>
+          <div class="item_info_perfil">
+            <h4>Mail</h4>
+            <input class="input_perfil" name="email"  placeholder="email" [(ngModel)]="usuario.email" (ngModelChange)="unchangedFlag = false" (ngModelChange)="isEmail(usuario.email!)" />
+          </div>
+          <div class="item_info_perfil">
+            <h4>Tiempo de Lectura Promedio</h4>
+            <input class="input_perfil" name="avgTime" placeholder="Tiempo promedio de lectura" [(ngModel)]="usuario.avgTime" (ngModelChange)="unchangedFlag = false"/>
+          </div>
+        </div>
+      </div>
+      <hr class="separador" />
+      <div class="info_perfil">
+        <h2 class="subtitulo_seccion">Forma de Lectura</h2>
+        <div class="item_info_container">
+          <div class="item_info_checkbox">
+            <input name="tipoLector" type="radio" style="margin-right: 10px" [(ngModel)]="usuario.tipoLector" [value]="promedio" (ngModelChange)="unchangedFlag = false"/>
+            <h4>Lector Promedio</h4>
+          </div>
+          <div class="item_info_checkbox">
+            <input name="tipoLector" type="radio" style="margin-right: 10px" [(ngModel)]="usuario.tipoLector" [value]="ansioso" (ngModelChange)="unchangedFlag = false"/>
+            <h4>Ansioso</h4>
+          </div>
+          <div class="item_info_checkbox">
+            <input name="tipoLector" type="radio" style="margin-right: 10px" [(ngModel)]="usuario.tipoLector"  [value]="fanatico" (ngModelChange)="unchangedFlag = false"/>
+            <h4>Fanatico</h4>
+          </div>
+          <div class="item_info_checkbox">
+            <input name="tipoLector" type="radio" style="margin-right: 10px" [(ngModel)]="usuario.tipoLector" [value]="recurrente" (ngModelChange)="unchangedFlag = false"/>
+            <h4>Recurrente</h4>
+          </div>
+        </div>
+      </div>
+      <hr class="separador" />
+      <div class="info_perfil">
+        <h2 class="subtitulo_seccion">Criterio de busqueda</h2>
+        <div class="item_info_container">
+          <div class="item_info_checkbox">
+            <input type="checkbox" style="margin-right: 10px" [checked]="getCheckbox(precavido)" (click)="aniadirACriterioBusqueda(precavido)"/>
+            <h4>Precavido</h4>
+          </div>
+          <div class="item_info_checkbox">
+            <input type="checkbox" style="margin-right: 10px" [checked]="getCheckbox(leedor)" (click)="aniadirACriterioBusqueda(leedor)"/>
+            <h4>Leedor</h4>
+          </div>
+          <div class="item_info_checkbox">
+            <input type="checkbox" style="margin-right: 10px" [checked]="getCheckbox(poliglota)" (click)="aniadirACriterioBusqueda(poliglota)"/>
+            <h4>Poliglota</h4>
+          </div>
+          <div class="item_info_checkbox">
+            <input type="checkbox" style="margin-right: 10px" [checked]="getCheckbox(demandante)" (click)="aniadirACriterioBusqueda(demandante)"/>
+            <h4>Demandante</h4>
+          </div>
+          <div class="item_info_checkbox">
+            <input type="checkbox" style="margin-right: 10px" [checked]="getCheckbox(nativista)" (click)="aniadirACriterioBusqueda(nativista)"/>
+            <h4>Nativista</h4>
+          </div>
+          <div class="item_info_checkbox">
+            <input type="checkbox" style="margin-right: 10px" [checked]="getCheckbox(experimentado)" (click)="aniadirACriterioBusqueda(experimentado)"/>
+            <h4>Experimentado</h4>
+          </div>
+          <div class="item_info_checkbox">
+            <input type="checkbox" style="margin-right: 10px" [checked]="getCheckbox(cambiante)" (click)="aniadirACriterioBusqueda(cambiante)"/>
+            <h4>Cambiante</h4>
+          </div>
+          <div class="item_info_checkbox">
+            <input type="checkbox" style="margin-right: 10px" [checked]="getCheckbox(calculador)" (click)="aniadirACriterioBusqueda(calculador)"/>
+            <h4>Calculador</h4>
+          </div>
+          <div class="item_info_perfil">
+            <h4>Limite Minimo</h4>
+            <input name="limMin" class="input_perfil" type="text" [(ngModel)]="usuario.limMin" (ngModelChange)="unchangedFlag = false"/>
+          </div>
+          <div class="item_info_perfil">
+            <h4>Limite Maximo</h4>
+            <input name="limMax" class="input_perfil" type="text" [(ngModel)]="usuario.limMax" (ngModelChange)="unchangedFlag = false"/>
+          </div>
+        </div>
+        <div class="boton_container">
+          <button class="boton-secundario" (click)="cancelar()">Cancelar</button>
+          <button class="boton-principal" type="submit">Guardar Cambios</button>
+        </div>
+      </div>
+  </div>
+</form>

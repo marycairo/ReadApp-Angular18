@@ -1,0 +1,18 @@
+<header class="header">
+  <div class="header__icon__container">
+    <i class="ph ph-book"></i>
+    <h1 class="header__icon">ReadApp</h1>
+  </div>
+  <div class="header__user" (click)="toggleNavbar()">
+    <div class="header__image">
+      <img
+        [src]="'assets/images/perfil/' + getUserLogedID() + '.jpg'"
+        class="user__image"
+      />
+    </div>
+    <div class="header__name">{{ authService.userName }}</div>
+  </div>
+  <div class="header__hamburger" (click)="toggleNavbar()">
+    <i class="ph ph-list"></i>
+  </div>
+</header>

@@ -1,0 +1,221 @@
+[
+  {
+    "titulo": "Titulo 1",
+    "detalle": "Esta es una reseña fake 1",
+    "libros": [
+      {
+        "id": 1,
+        "titulo": "El viaje interminable",
+        "palabras": 75000,
+        "paginas": 320,
+        "ediciones": 3,
+        "ventasSemanales": 500,
+        "lenguajeOriginal": "Inglés",
+        "idiomas": ["Español", "Francés", "Alemán"],
+        "lecturaCompleja": true,
+        "autores": [
+          {
+            "nombre": "John Smith",
+            "edad": 45,
+            "premios": ["Premio Nacional de Literatura", "Medalla al Mérito"]
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "titulo": "Caminos de Fuego",
+        "palabras": 90000,
+        "paginas": 400,
+        "ediciones": 5,
+        "ventasSemanales": 300,
+        "lenguajeOriginal": "Español",
+        "idiomas": ["Inglés", "Portugués"],
+        "lecturaCompleja": false,
+        "autores": [
+          {
+            "nombre": "Maria Pérez",
+            "edad": 50,
+            "premios": ["Premio Internacional de Novela"]
+          }
+        ]
+      }
+    ],
+    "valoraciones": [
+      {
+        "usuario": "usuario1",
+        "puntaje": 5,
+        "comentario": "Libro increíble, lo recomiendo totalmente."
+      },
+      {
+        "usuario": "usuario2",
+        "puntaje": 4,
+        "comentario": "Buena lectura, aunque algo compleja en algunas partes."
+      },
+      {
+        "usuario": "usuario3",
+        "puntaje": 5,
+        "comentario": "Una experiencia literaria fascinante, atrapante de principio a fin. Y este texto es muy muy largoooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo este texto es muy muy largoo este texto es muy muy largoo este texto es muy muy largoo"
+      }
+    ],
+    "id": 1
+  },
+  {
+    "titulo": "Titulo 2",
+    "detalle": "Esta es una reseña fake 2",
+    "libros": [
+      {
+        "id": 3,
+        "titulo": "La noche en París",
+        "palabras": 50000,
+        "paginas": 200,
+        "ediciones": 2,
+        "ventasSemanales": 150,
+        "lenguajeOriginal": "Francés",
+        "idiomas": ["Inglés", "Español"],
+        "lecturaCompleja": false,
+        "autores": [
+          {
+            "nombre": "Claire Dubois",
+            "edad": 38,
+            "premios": ["Premio Goncourt"]
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "titulo": "El secreto de Berlín",
+        "palabras": 60000,
+        "paginas": 250,
+        "ediciones": 4,
+        "ventasSemanales": 200,
+        "lenguajeOriginal": "Alemán",
+        "idiomas": ["Inglés", "Español", "Ruso"],
+        "lecturaCompleja": true,
+        "autores": [
+          {
+            "nombre": "Hans Müller",
+            "edad": 60,
+            "premios": ["Premio Goethe", "Medalla de la Literatura Alemana"]
+          }
+        ]
+      }
+    ],
+    "valoraciones": [
+      {
+        "usuario": "usuario4",
+        "puntaje": 4,
+        "comentario": "Entretenido, pero esperaba más del final."
+      },
+      {
+        "usuario": "usuario5",
+        "puntaje": 3,
+        "comentario": "La trama es buena, pero el desarrollo de personajes es flojo."
+      }
+    ],
+    "id": 2
+  },
+  {
+    "titulo": "Titulo 3",
+    "detalle": "Esta es una reseña fake 3",
+
+    "libros": [
+      {
+        "id": 5,
+        "titulo": "El sol naciente",
+        "palabras": 120000,
+        "paginas": 500,
+        "ediciones": 6,
+        "ventasSemanales": 1000,
+        "lenguajeOriginal": "Japonés",
+        "idiomas": ["Inglés", "Español", "Coreano"],
+        "lecturaCompleja": true,
+        "autores": [
+          {
+            "nombre": "Hiroshi Tanaka",
+            "edad": 40,
+            "premios": ["Premio Akutagawa", "Medalla del Emperador"]
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "titulo": "Viaje a Roma",
+        "palabras": 45000,
+        "paginas": 180,
+        "ediciones": 1,
+        "ventasSemanales": 80,
+        "lenguajeOriginal": "Italiano",
+        "idiomas": ["Inglés", "Francés"],
+        "lecturaCompleja": false,
+        "autores": [
+          {
+            "nombre": "Luca Rossi",
+            "edad": 35,
+            "premios": ["Premio Strega"]
+          }
+        ]
+      }
+    ],
+    "valoraciones": [
+      {
+        "usuario": "usuario6",
+        "puntaje": 5,
+        "comentario": "Una obra maestra. La narrativa es impresionante."
+      },
+      {
+        "usuario": "usuario7",
+        "puntaje": 4,
+        "comentario": "Excelente libro, pero algunas partes son un poco largas."
+      },
+      {
+        "usuario": "usuario8",
+        "puntaje": 3,
+        "comentario": "La historia es interesante, pero el estilo de escritura no me atrapó."
+      },
+      {
+        "usuario": "usuario9",
+        "puntaje": 5,
+        "comentario": "El mejor libro que he leído en años. Recomendado."
+      },
+      {
+        "usuario": "usuario10",
+        "puntaje": 4,
+        "comentario": "Buen libro, aunque el final no me convenció del todo."
+      }
+    ],
+    "id": 3
+  },
+  {
+    "titulo": "Titulo 4",
+    "detalle": "Esta es una reseña fake 4",
+
+    "libros": [
+      {
+        "id": 7,
+        "titulo": "La estepa rusa",
+        "palabras": 75000,
+        "paginas": 320,
+        "ediciones": 3,
+        "ventasSemanales": 500,
+        "lenguajeOriginal": "Ruso",
+        "idiomas": ["Inglés", "Español", "Chino"],
+        "lecturaCompleja": true,
+        "autores": [
+          {
+            "nombre": "Alexei Ivanov",
+            "edad": 52,
+            "premios": ["Premio Pushkin"]
+          }
+        ]
+      }
+    ],
+    "valoraciones": [
+      {
+        "usuario": "usuario11",
+        "puntaje": 4,
+        "comentario": "Un libro que invita a reflexionar. Me gustó mucho."
+      }
+    ],
+    "id": 4
+  }
+]

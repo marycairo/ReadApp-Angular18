@@ -1,0 +1,102 @@
+[
+    {
+      "id": 1,
+      "titulo": "El viaje del héroe",
+      "cantidadPalabras": 95000,
+      "cantidadPaginas": 320,
+      "paginasParaSerLargo": 500,
+      "cantidadEdiciones": 3,
+      "ventasSemanales": 1200,
+      "autor": {
+        "id": 2,
+        "nombre": "María",
+        "apellido": "García",
+        "edad": 38,
+        "premios": ["Premio Alfaguara", "Premio Planeta"]
+      },
+      "lenguajesTraduccion": ["Inglés", "Francés", "Alemán"],
+      "lenguajesPublicados": ["Español", "Inglés"],
+      "lecturaCompleja": false,
+      "fechaPublicacion": "2015-06-12"
+    },
+    {
+      "id": 2,
+      "titulo": "La sombra del tiempo",
+      "cantidadPalabras": 125000,
+      "cantidadPaginas": 450,
+      "paginasParaSerLargo": 400,
+      "cantidadEdiciones": 5,
+      "ventasSemanales": 950,
+      "autor": {
+        "id": 1,
+        "nombre": "Jorge",
+        "apellido": "Lucas",
+        "edad": 38,
+        "premios": ["Premio Nodriza", "Premio Hawk Tuah"]
+      },
+      "lenguajesTraduccion": ["Italiano", "Portugués"],
+      "lenguajesPublicados": ["Español", "Portugués"],
+      "lecturaCompleja": true,
+      "fechaPublicacion": "2010-09-15"
+    },
+    {
+      "id": 3,
+      "titulo": "El eco de los sueños",
+      "cantidadPalabras": 85000,
+      "cantidadPaginas": 290,
+      "paginasParaSerLargo": 350,
+      "cantidadEdiciones": 2,
+      "ventasSemanales": 400,
+      "autor":{
+        "id": 2,
+        "nombre": "María",
+        "apellido": "García",
+        "edad": 38,
+        "premios": ["Premio Alfaguara", "Premio Planeta"]
+      },
+      "lenguajesTraduccion": ["Inglés"],
+      "lenguajesPublicados": ["Español"],
+      "lecturaCompleja": false,
+      "fechaPublicacion": "2018-03-20"
+    },
+    {
+      "id": 4,
+      "titulo": "Los confines del mar",
+      "cantidadPalabras": 105000,
+      "cantidadPaginas": 380,
+      "paginasParaSerLargo": 400,
+      "cantidadEdiciones": 4,
+      "ventasSemanales": 1500,
+      "autor": {
+        "id": 3,
+        "nombre": "Roberto",
+        "apellido": "Carlos",
+        "edad": 55,
+        "premios": ["Premio Albañil", "Premio añia"]
+      },
+      "lenguajesTraduccion": ["Francés", "Alemán"],
+      "lenguajesPublicados": ["Español", "Inglés"],
+      "lecturaCompleja": true,
+      "fechaPublicacion": "2012-11-08"
+    },
+    {
+      "id": 5,
+      "titulo": "Caminos inciertos",
+      "cantidadPalabras": 75000,
+      "cantidadPaginas": 250,
+      "paginasParaSerLargo": 300,
+      "cantidadEdiciones": 1,
+      "ventasSemanales": 600,
+      "autor":{
+        "id": 2,
+        "nombre": "María",
+        "apellido": "García",
+        "edad": 38,
+        "premios": ["Premio Alfaguara", "Premio Planeta"]
+      },
+      "lenguajesTraduccion": ["Inglés", "Italiano"],
+      "lenguajesPublicados": ["Español"],
+      "lecturaCompleja": false,
+      "fechaPublicacion": "2021-07-22"
+    }
+  ]

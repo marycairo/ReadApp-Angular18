@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ReadApp - Iniciar Sesión</title>
+    <link rel="stylesheet" href="login.css" />
+  </head>
+  <body class="content-centered">
+    <div class="login-container box-border">
+      <div class="login-box">
+        <div class="logo">
+          <h1>
+            <img src="icons/book.svg" alt="Ícono ReadApp" class="logo-icon" />
+            ReadApp
+          </h1>
+        </div>
+        <form action="#" method="post" onsubmit="return false;">
+          <div class="input-group">
+            <label for="username">Usuario*</label>
+            <!-- HARDCODEADO PARA LA DEMOSTRACION DE LA ENTREGA. -->
+            <input
+              class="error"
+              type="text"
+              id="username"
+              name="username"
+              required
+            />
+            <p class="error-message visible">
+              <img
+                src="icons/warning.svg"
+                alt="Icono de Aviso"
+                class="warning-icon"
+              />
+              El nombre de usuario es obligatorio.
+            </p>
+          </div>
+          <div class="input-group">
+            <label for="password">Password*</label>
+            <div class="password-wrapper">
+              <input type="password" id="password" name="password" required />
+              <span class="show-password">
+                <img
+                  src="icons/eye.svg"
+                  alt="Icono De Ojo"
+                  class="password-icon"
+                />
+              </span>
+            </div>
+          </div>
+          <button class="boton-principal" type="submit">Ingresar</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

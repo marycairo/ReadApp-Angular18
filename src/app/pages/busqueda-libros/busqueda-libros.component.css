@@ -1,0 +1,20 @@
+.book-card-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    margin: 0.5rem auto;
+  }
+  
+  .content_libro_layout {
+    display: grid;
+    grid-template-areas:
+      "searchbar"
+      "cards";
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    max-width: 100%;
+  }
